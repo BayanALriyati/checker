@@ -1,4 +1,4 @@
-//  test
+ 
 var arraystudant=[
     {
     id:25,
@@ -102,6 +102,7 @@ let fName =document.getElementById("signin1").value;
 let lName =document.getElementById("signin2").value;
 let email =document.getElementById("signin3").value;
 let password =document.getElementById("signin4").value;
+let repassword =document.getElementById("signin5").value;
 
 let x = /\d/;
 let y = /\w+/;
@@ -164,6 +165,19 @@ document.getElementById("sigh4").style.fontSize = "16px";
 }
 
 
+if (password == repassword){
+document.getElementById("sigh5").innerHTML = "";
+
+}
+
+else {
+document.getElementById("sigh5").innerHTML = "please enter correct password";
+
+document.getElementById("sigh5").style.color ="red";
+document.getElementById("sigh5").style.fontSize = "16px";
+}
+
+
 let obj = {
     Firstname:fn,
     LastName:ln,
@@ -174,7 +188,7 @@ let obj = {
     
    
  if((y.test(fName)) && (y.test(lName)) && (re1.test(email))
-     && (password.match(z))){
+     && (password.match(z)) && (password == repassword) ){
 
     arr.push(obj)
 

@@ -4,92 +4,95 @@ var user =JSON.parse(localStorage.getItem('user'));
 
 
 if(user[user.length -1].Firstname =="mona"){
-document.getElementById("img-trener").src="mona.jpg"
-document.getElementById("imgpro2").src="mona.jpg"
+document.getElementById("img-trener").src="mona_2.png"
+document.getElementById("imgpro2").src="mona_2.png"
+document.getElementById("imgpro22").src="mona_2.png"
 }
 if(user[user.length -1].Firstname =="alaa"){
     document.getElementById("img-trener").src="trener.jpg"
     document.getElementById("imgpro2").src="trener.jpg"
-    }
-    document.getElementById("pro11").innerHTML=user[user.length -1].Firstname
-    document.getElementById("pro22").innerHTML=user[user.length -1].LastName
-    document.getElementById("pro33").innerHTML=user[user.length -1].Email
-    document.getElementById("pro44").innerHTML=user[user.length -1].Password
- var arraystudant = JSON.parse(localStorage.getItem('arraystudant'));
-
-    // var news=['ahmad',
-    // 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, ',
-    // 'amro '];
-    // var notes=[{name:'Ahmad',note:['note0','note1','note2']},
-    //             {name:'Salwa',note:['SAlwa1','SAlwa2','SAlwa3']}
-    //             ]
-
-for (let i = 0; i < notes.length; i++) {
-     if (notes[i].name === user[user.length -1].Firstname){
-        for (let j = 0; j < notes[i].note.length; j++) {
-           document.getElementById('notes').innerHTML +='<li>'+notes[i].note[j]+'</li>' 
-            
-        }
-     }
+    document.getElementById("imgpro22").src="trener.jpg"
     
-}
+    }
+// ______________profail_________________
+document.getElementById("pro11").innerHTML=user[user.length -1].Firstname
+document.getElementById("pro22").innerHTML=user[user.length -1].LastName
+document.getElementById("pro33").innerHTML=user[user.length -1].Email
+document.getElementById("pro44").innerHTML=user[user.length -1].Password
+var arraystudant = JSON.parse(localStorage.getItem('arraystudant'));
 
-// _____________________________________________________
 
-// for (let a = 0; a <100; a++) {
-//     document.getElementById('news').innerHTML ='<p>'+news[a]+'</p>' 
-// }
-// 
-// let myVar = setInterval(bgChange ,1000);
+let btn=document.querySelector("#profilebutton")
+btn.addEventListener("click",edit)
+function edit(event){
+    
 
-// array to store strings
+    xx=document.getElementById("Firstnamee").value
+    user[0].Firstname=xx
+    yy=document.getElementById("Lastnamee").value
+    user[0].LastName=yy
+    zz=document.getElementById("Emaill").value
+    user[0].Email=zz
+    ww=document.getElementById("Passwordd").value
+    user[0].Password=ww
 
-// img()
+    // localStorage.removeItem("user")
+  
+    localStorage.setItem("user",JSON.stringify(user))
+   
+    // JSON.parse(localStorage.getItem('user'));
+    document.getElementById("pro11").innerHTML=xx
+    document.getElementById("pro22").innerHTML=yy
+    document.getElementById("pro33").innerHTML=zz
+    document.getElementById("pro44").innerHTML=ww
+    //  var user =JSON.parse(localStorage.getItem('user'));
+    document.getElementById('DivProfile').style.display='none'
+     event.preventDefault()
+ }
+ function showEdit(){
+    document.getElementById('DivProfile').style.display='flex'
+    
+    }
+
+newss()
+
 function newss(){
 var poem = ["Hours will be shifted online next week",
-    "Orange Academy congratulates Eng. Salama Yassin on his safe release from treatment last night in a hospital, due to exposure to air pivot due to the change in weather",
+    "Orange Academy congratulates Eng. Salama Yassin on his safe release from treatment last night in a hospital, due to exposure to air pivot due to the change in weather"
   ];
-  var i = 1; // Start at 1 because 0 is already displayed
+  var i = 0; // Start at 1 because 0 is already displayed
   
   var animInterval = window.setInterval(function() {
       document.querySelector("#text").textContent = poem[i];
       i = ++i % poem.length; // Add 1 until it reaches 5, then back to 0, 1, 2...
-  }, 3000);
+  }, 1000);
 }
-//   _______________________
-// function img(){
-//   var imggg = [
-//     "salameh.jpeg",
-//     // "1.jpg",
-//     // "2.jpg",
-//     // "3.jpg",
-//   ];
-//   var e = 0; // Start at 1 because 0 is already displayed
-  
-//   var animIntervalimg = window.setInterval(function() {
-//       document.getElementById("imgnews").src =imggg[i];
-//       e = ++e % imggg.length; // Add 1 until it reaches 5, then back to 0, 1, 2...
-//   }, 1000);
-//   }
-pix = new Array();
-pix[0] = "salameh.jpeg";
-pix[1] = "aca.jpg";
+// pix = new Array();
+// pix[0] = "aca.jpg";
+// pix[1] = "salameh.jpeg";
 
- 
+pix=["aca.jpg","salameh.jpeg"]
+
 var i = 0;
+change()
 slideshow()
+
 function slideshow(){
-setInterval("change()", 3000);
+setInterval("change()",1000);
 
 }
  
  
 function change(){
+
 document.images.pic.src = pix[i];
 i = i + 1;
 if (i > (pix.length-1)) {i = 0} 
 newss()
 }
+// _____________________________________________________________
+
+
  
 // ____________________________________
     var feedback=JSON.parse(localStorage.getItem('feedback'));;
@@ -101,25 +104,35 @@ function Show(id) {
     document.getElementById('trainees').style.display='none';
     document.getElementById('feedback').style.display='none';
     document.getElementById('Profile').style.display='none';
+
     document.getElementById(id).style.display='block';
+
+   if(id=="home"){
+    document.getElementById('fas1').style.color='red';
+    document.getElementById('fas2').style.color='#0622bc';
+    document.getElementById('fas3').style.color='#0622bc';
+    document.getElementById('fas4').style.color='#0622bc';
 }
-
-
-function TotalTask(){
-x=document.getElementById('TOTAL').value;
-// localStorage.setItem("TotalTask",JSON.stringify(x));
-for(var i=0;i<arraystudant.length; i++){
-    arraystudant[i].totalTask+=parseInt(x)
+   else if(id=="trainees"){
+    document.getElementById('fas1').style.color='#0622bc';
+    document.getElementById('fas2').style.color='red';
+    document.getElementById('fas3').style.color='#0622bc';
+    document.getElementById('fas4').style.color='#0622bc';
 }
-console.log(x);
-
-table(arraystudant); 
-
-
+else if(id=="feedback"){
+    document.getElementById('fas1').style.color='#0622bc';
+    document.getElementById('fas2').style.color='#0622bc';
+    document.getElementById('fas3').style.color='red';
+    document.getElementById('fas4').style.color='#0622bc';
 }
-
-// var TA=JSON.parse(localStorage.getItem("TotalTask"));
-// var TA=1;
+else if(id=="Profile"){
+    document.getElementById('fas1').style.color='#0622bc';
+    document.getElementById('fas2').style.color='#0622bc';
+    document.getElementById('fas3').style.color='#0622bc';
+    document.getElementById('fas4').style.color='red';
+}
+}
+// _____________________________________________________
 
 table(arraystudant);
 function table(arraystudant) {
@@ -150,21 +163,10 @@ document.getElementById("tableContainer").innerHTML = html;
 
 }
 // _________________________
-function Taskrecording(x){
-    arraystudant[x].Task+=1;
-console.log(x);
-table(arraystudant); 
-}
-
-function AbsenceRecording(y){
 
 
-    arraystudant[y].absent+=1
-    table(arraystudant);
-}
 
-
-// ________________________
+// _______show div____________
 function showAddStudent(){
     document.getElementById('AddTaskDiv').style.display='none';
     document.getElementById('addStudentDiv').style.display='block';
@@ -180,15 +182,27 @@ function showAddFeedback(){
     document.getElementById('addStudentDiv').style.display='none';
     document.getElementById('FeedbackDiv').style.display='block';
 }
-
+// __________________________
+function TotalTask(){
+    x=document.getElementById('TOTAL').value;
+    // localStorage.setItem("TotalTask",JSON.stringify(x));
+    for(var i=0;i<arraystudant.length; i++){
+        arraystudant[i].totalTask+=parseInt(x)
+    }
+    console.log(x);
+    document.getElementById('AddTaskDiv').style.display='none';
+    table(arraystudant); 
+    
+    }
+    // __________________Table Studant _______________________________
 
 function addStudent(){
 var ID=document.getElementById('studentID').value;
 var TS=document.getElementById('studentTS').value;
 var AB=document.getElementById('studentAB').value;
-
-
 var name=document.getElementById('studentName').value;
+
+
 var ob={'id':parseInt(ID),
         'Name':name,
         'Task':parseInt(TS),
@@ -206,19 +220,7 @@ document.getElementById('studentAB').value='';
 document.getElementById('addStudentDiv').style.display='none';
 table(arraystudant);
 
-
-
 }
-
-
-
-
-
-
-
-
-
-
 
 
 function removeObjectWithId(arraystudant, id) {
@@ -228,18 +230,19 @@ arraystudant.splice(objWithIdIndex, 1);
 table(arraystudant);
 }
 
+function Taskrecording(x){
+    arraystudant[x].Task+=1;
+console.log(x);
+table(arraystudant); 
+}
 
-//  var objTrener=[
-//     {name:'trener1',password:1212},{name:'trener2',password:1313}
-//     ];
+function AbsenceRecording(y){
 
-  
+
+    arraystudant[y].absent+=1
+    table(arraystudant);
+} 
     
-
-
-
-
-
 // _______________Feedback________________________
 
 var html = `<select class="form-select" id="selFeedback">`;
@@ -252,22 +255,12 @@ document.getElementById("sel").innerHTML = html;
 
 
 
-// ___
-// var html = `<select id="trainerFeedback" >`;
-// for (var i = 0; i < user.length; i++) {
-//     html +=`<option value="${user[0].FirstName}">${user[i].FirstName}</option>`
-// }
-// html += "</select>";
-// document.getElementById("selTrener").innerHTML += html;
-
-
-
-
 function Feed(){
     var today = new Date();
     var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
     var time = today.getHours() + ":" + today.getMinutes();
     var dateTime = date+' '+time;
+    
  var selFeedback =document.getElementById('selFeedback').value
     var trainerFeedback=user[user.length -1].Firstname
     var feedbackText=document.getElementById('feedbackText').value
@@ -280,16 +273,18 @@ var ob={'trainer': trainerFeedback ,'Student':selFeedback, 'feedback':feedbackTe
        };
 
        feedback.push(ob);
-console.log(feedback);
-alert('Feedback Added succesfully ');
-document.getElementById('selFeedback').value='';
-// document.getElementById('trainerFeedback').value='';
-document.getElementById('feedbackText').value='';
-showFeedbackTable();
+        console.log(feedback);
+        alert('Feedback Added succesfully ');
+        document.getElementById('selFeedback').value='';
+        // document.getElementById('trainerFeedback').value='';
+        document.getElementById('feedbackText').value='';
+        showFeedbackTable();
+        document.getElementById('FeedbackDiv').style.display='none';
+
     }
 
 }
-// ______
+
 
 function showFeedbackTable() {
 
@@ -314,16 +309,29 @@ for (var i = 0; i < feedback.length; i++) {
 html += "</table>";
 document.getElementById("tableFeedback").innerHTML = html;
 }
-// ____
+
 showFeedbackTable();
+// ____________end feedback______________________
+
+
 function Save() {
 
     localStorage.setItem("arraystudant",JSON.stringify(arraystudant));
     localStorage.setItem("feedback",JSON.stringify(feedback));
 }
-// arraystudant=JSON.parse(localStorage.getItem('arraystudant'));
-// feedback=JSON.parse(localStorage.getItem('feedback'));
-// ______________________________________________________________________________________________
+
+// ______________________________Note________________________________________________________________
+
+for (let i = 0; i < notes.length; i++) {
+    if (notes[i].name === user[user.length -1].Firstname){
+       for (let j = 0; j < notes[i].note.length; j++) {
+          document.getElementById('notes').innerHTML +='<li>'+notes[i].note[j]+'</li>' 
+           
+       }
+    }
+   
+}
+
 function addNote() {
     var TExtNote= document.getElementById('writeNote');
 user[user.length -1].note.push(TExtNote.value);
@@ -346,10 +354,6 @@ function reloadNotes() {
 
   });
 
-// for(i=0 ;i<user[x].note.length-1;i++){
-
-//     Notecontainer.innerHTML +='<p>'+ user[0].note[i] + '</p>';
-// }
 }
 function deleteNote() {
     if(document.getElementById('notes').value!==" "){
@@ -376,3 +380,4 @@ document.getElementById("NameTrener").innerHTML=user[user.length -1].Firstname
 function showpasss(){
     document.getElementById("pro44").style.display="block"
 }
+

@@ -7,7 +7,7 @@ table , td , th {
     text-align: center;
 }
 table th {
-  background-color: #012e61f5;
+  background-color:#0c0226;
 color:#fff;
 padding:4px 10px 4px 4px ;
 text-align: center;
@@ -53,6 +53,7 @@ background-color: #387fcf77;
 table{
     width:80% ;
 }
+tbody{    border: 3px solid;}
 /* ---------------------- */
 #salwa{
   background-color: #012e61f5;
@@ -113,14 +114,13 @@ table{
    margin-top: 2em;
   
 }
-#obida{
+#obida {
   background-color: #012e61f5;
   color: #fff;
   border: none;
   border-radius: 1em;
-  width: 10em;
-  height: 3em;  
- 
+  width: 9em;
+  height: 2.5em;
 }
 #obida:hover{
     background-color: #fff;
@@ -211,16 +211,16 @@ textarea:focus{
   color:rgb(10 27 89 / 94%) ;
 }
 .fosi {
-  color:rgb(10 27 89 / 94%);
+  color:#0c0226;
   font-size: 2.5em;
   /* text-shadow: 2px 2px 8px #0077ff; */
 }
 #hrblock{
   width: 100%;
-  border-bottom: #0077ff;
+  border-bottom: #082e5a;
 }
 #sall{
-  background-color: #0077ff;
+  background-color: #022d5e;
   color: #fff;
   border: none;
   border-radius: 1em;
@@ -230,10 +230,18 @@ textarea:focus{
   /* margin-top: 22em; */
 }
 #label{
-  color: #0077ff;
+  color: #0559b9;
 }
 #wspan{
   margin-left: 20em;
   font-size: 1.5em;
   color: #555;
 }
+
+
+#hrrr {
+    background-color: #140273;
+    height: 2px;
+    opacity:1;
+}
+

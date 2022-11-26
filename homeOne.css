@@ -78,12 +78,8 @@ body{
   
   }
   
-  
-  .Pone,.Ptow{
-    font-family: 'Rubik Glitch', cursive;
-  
-    
-  }
+
+
   
   #wlc{
    
@@ -102,14 +98,14 @@ body{
   
     /* font-family: 'Rubik Glitch', cursive; */
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 35px;
+  font-size: 27px;
   margin-top: .3em;
 
   }
   
   #Ptow{
     /* font-family: 'Titan One', cursive; */
-    font-size: 40px;
+    font-size: 30px;
   /* color: #0d6efd; */
 
 
@@ -137,7 +133,9 @@ body{
   .btn{
     display: flex;
     flex-direction: row;
-    margin-top: 25vh;
+    margin-top: 10vh;
+    height: 50px;
+    /* width: 500px; */
 
 
   }

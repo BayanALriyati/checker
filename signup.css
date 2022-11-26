@@ -39,7 +39,7 @@ color :#fff;
 }
 #signin1  
 {
-    top:10.9em;
+    top:9.5em;
     left: 5em;
 
 }
@@ -52,13 +52,13 @@ color :#fff;
     background: none ;
     padding: .6em;
     color :#fff;
-    top:10.5em;
+    top:9.2em;
     left: 8em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #signin2
 {
-    top:15.25em;
+    top:14.1em;
     left: 5em;
 } 
 #sigh2{
@@ -70,13 +70,13 @@ color :#fff;
     background: none ;
     padding: .6em;
     color :#fff;
-    top:14em;
+    top:13em;
     left: 8em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #signin3
 {
-    top:19.6em;
+    top:18.5em;
     left: 5em;
 }
 #sigh3{
@@ -88,13 +88,13 @@ color :#fff;
     background: none ;
     padding: .6em;
     color :#fff;
-    top:17.8em;
+    top:16.7em;
     left: 6em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #signin4
 {
-    top:24em;
+    top:23em;
     left: 5em;
 
 }
@@ -107,13 +107,47 @@ color :#fff;
     background: none ;
     padding: .6em;
     color :#fff;
-    top:21.5em;
+    top:20.4em;
     left: 8em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+#signin5
+{
+    top:27.5em;
+    left: 5em;
+
+}
+#sigh5{
+    position: absolute;
+    outline: none;
+    border : none;
+    width:25em;
+    height: 2em;
+    background: none ;
+    padding: .6em;
+    color :#fff;
+    top:24.1em;
+    left: 8em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#logoSignUp {
+    position: fixed;
+    top: 12px;
+    left: 10px;
+    width: 4.7em;
+    height: 4.7em;
+}
+#logoLogin {
+    position: fixed;
+    top: 12px;
+    left: 10px;
+    width: 4.7em;
+    height: 4.7em;
+}
 button[value="register"]{
     position: absolute;
-    top : 30em ;
+    top : 31.3em ;
     left : 11.5em;
     width: 10.1em;
     height: 3.18em ;
