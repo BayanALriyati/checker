@@ -24,6 +24,7 @@ var arraystudant = JSON.parse(localStorage.getItem('arraystudant'));
 
 let btn=document.querySelector("#profilebutton")
 btn.addEventListener("click",edit)
+
 function edit(event){
     
 
@@ -47,13 +48,14 @@ function edit(event){
     document.getElementById("pro44").innerHTML=ww
     //  var user =JSON.parse(localStorage.getItem('user'));
     document.getElementById('DivProfile').style.display='none'
+    location.reload();
+
      event.preventDefault()
  }
  function showEdit(){
     document.getElementById('DivProfile').style.display='flex'
     
     }
-
 newss()
 
 function newss(){
