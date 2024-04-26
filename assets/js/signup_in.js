@@ -17,7 +17,7 @@ var arraystudant=[
          
     },
     {
-    id:08,
+    id: 8,
     Name:"ahmad Zytoon",
     Task:15,
     absent:5,
@@ -73,7 +73,7 @@ var arraystudant=[
 
     },
     {
-    id:01,
+    id: 1,
     Name:"AsemYassen",
     Task:15,
     absent:0,

@@ -4,14 +4,14 @@ var user =JSON.parse(localStorage.getItem('user'));
 
 
 if(user[user.length -1].Firstname =="mona"){
-document.getElementById("img-trener").src="mona_2.png"
-document.getElementById("imgpro2").src="mona_2.png"
-document.getElementById("imgpro22").src="mona_2.png"
+document.getElementById("img-trener").src= "./assets/image/mona_2.png"
+document.getElementById("imgpro2").src="./assets/image/mona_2.png"
+document.getElementById("imgpro22").src="./assets/image/mona_2.png"
 }
 if(user[user.length -1].Firstname =="alaa"){
-    document.getElementById("img-trener").src="trener.jpg"
-    document.getElementById("imgpro2").src="trener.jpg"
-    document.getElementById("imgpro22").src="trener.jpg"
+    document.getElementById("img-trener").src="./assets/image/.jpg"
+    document.getElementById("imgpro2").src="./assets/image/.jpg"
+    document.getElementById("imgpro22").src="./assets/image/.jpg"
     
     }
 // ______________profail_________________
@@ -73,7 +73,7 @@ var poem = ["Hours will be shifted online next week",
 // pix[0] = "aca.jpg";
 // pix[1] = "salameh.jpeg";
 
-pix=["aca.jpg","salameh.jpeg"]
+pix=["./assets/image/aca.jpg","./assets/image/salameh.jpeg"]
 
 var i = 0;
 change()

@@ -314,7 +314,7 @@ margin-right: 4em;
     width: 100%;
 }
 body{
-    background-image: url(backbody.png);
+    background-image: url(../image/backbody.png);
     background-size: cover;
     background-repeat: no-repeat;
     
